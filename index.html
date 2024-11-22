@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="contanier">
+    <header>
+        <div class="introContainer">
+            <div class="writings"><p class="staticIntro">Hello, I am<br><p class="dynamicText"></p></p></div>
+            
+        </div>
+
+        <nav>
+            <ul class="navList">
+                <li class="navListItem" id="mainPageButton">WhoAmI</li> <!--make them stay on top of each other for mobile-->
+                <li class="navListItem" id="downloadsPageButton">Downloads&Links</li>
+                <li class="navListItem" id="projectsButton">Projects</li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <div class="container hidden" id="mainPage">
+        MAINPAGE
+    </div>
+    <div class="container hidden" id="downloadsPage">
+        downloadsPage
+    </div>
+    <div class="container hidden" id="projectsPage">
+        projectsPage
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

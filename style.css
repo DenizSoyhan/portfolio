@@ -24,19 +24,21 @@ nav{
     width: 60%;
     
     padding:0.1rem;
- 
+    margin-bottom: 1.5em;
+
     max-width: 550px;
 
     border-radius: 50px;
 
- 
+    
 }
 
 ul{
     list-style: none;
-    
+ 
 }
 li{
+    margin: 0 0.5rem;
     padding: 0.4rem 1rem;
     
     color: #ebebd3;
@@ -55,6 +57,7 @@ p{
 
     justify-content: center;
     align-items: center;
+    
 }
 .hidden{
     display: none;
@@ -86,6 +89,7 @@ p{
     cursor: pointer;
     transition: 0.3s ease;
  
+    font-size: 1.25rem;
 }
 .navListItem:hover{
     color: #3a6469;
@@ -114,13 +118,16 @@ p{
     font-size: 3rem;
 
     color: rgba(14, 13, 13, 0.63);
+
+    margin-top: 1rem;
 }
 .dynamicText{
     opacity: 0;
-    transition:opacity 3s ease-in;
+    transition:opacity 2s ease-in;
 
     margin-top: 0;
     font-weight: 400;
+    font-size: 2rem;
     font-family: monospace;
     border-right: 4px solid #3a6469;
     color: #3a6469;
@@ -150,9 +157,115 @@ p{
     flex-direction: column;
     justify-content: center;
  
+    margin-bottom: 0.5em;
 }
 
+/* MAIN PAGE*/
+#mainPage{
+    display: flex;
 
+    flex-direction: column;
+}
+.showContainer{
+    border:3px solid rgba(14, 13, 13, 0.63);;
+    width: 80%;
+    max-width: 775px;
+
+    margin:0.5em 0;
+}
+
+#education{
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+.school{
+    
+    margin-right:  1em;
+    margin-left:  1em;
+    margin-bottom: 0.5em;
+    border-bottom: 1px solid #ebebd3;
+
+    padding: 0.2em;
+
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+ 
+    cursor: pointer;
+}
+.school p{
+    font-size: 1rem;
+    display: inline-block;
+    
+    margin-right: 2em;
+
+
+}
+.expandButton{
+    font-size: 2em;
+    cursor: pointer;
+
+    color: #3a6469;
+
+    transition: 0.4s;
+}
+.expandButton.buttonActive{
+    content: '-';
+    cursor: pointer;
+
+    color: #c33149;
+
+    transition: 0.4s;
+}
+
+.name{
+    font-size: 1rem;
+    font-weight: 700;
+
+
+}
+.type{
+    
+    font-weight: 700;
+    color: #ebebd3;
+
+}
+
+.time{
+
+    margin-top: 0.5em;
+}
+.details{
+    padding: 0 1.5em;
+    height: 0px;
+
+    overflow: hidden;
+    transition: .5s;
+
+    color: #ebebd3;
+}
+
+.details.active{ /*TODO: add slick slide show*/
+    height: 100px;
+
+    overflow: hidden;
+    transition: 0.5s;
+}
+@media(max-width:870px){
+    .details.active{
+        height: 150px; 
+    
+        overflow: hidden;
+        transition: 0.5s;
+    }
+}
+#experience{
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+/* ANIMATIONS*/
 @keyframes typing {
     from{width: 0 ;}
 }

@@ -75,7 +75,7 @@ mainPageButton.addEventListener('click',function(){
             projectsPage.classList.add('hidden');
             mainPage.classList.remove('hidden')
             whichPage = 0;
-        }, 600);
+        }, 200);
     }
 })
 
@@ -95,7 +95,7 @@ downloadsPageButton.addEventListener('click',function(){
             downloadsPage.classList.remove('hidden');
             
             whichPage = 1;
-        }, 600);
+        }, 200);
     }
 })
 
@@ -115,6 +115,28 @@ projectsButton.addEventListener('click',function(){
             projectsPage.classList.remove('hidden');
             
             whichPage = 2;
-        }, 600);
+        }, 200);
     }
 })
+
+/*ACCORDION EDUCATION*/
+
+const outlookContainers = document.getElementsByClassName('outlook');
+
+for(let i=0;i<outlookContainers.length;i++){
+    let school=outlookContainers[i].childNodes[1]
+    let expandButton=school.childNodes[3];
+
+    let details=outlookContainers[i].childNodes[3];
+    console.log(expandButton)
+
+    outlookContainers[i].addEventListener('click',function(){
+        details.classList.toggle('active');
+        expandButton.classList.toggle('buttonActive');
+        if(expandButton.classList.contains('buttonActive')){ 
+            expandButton.textContent='-';
+        }else{
+            expandButton.textContent='+';
+        }
+    })
+}

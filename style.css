@@ -375,26 +375,52 @@ p{
 
     width: 30%;
     min-width: 180px;
-    height: 186px;
+    max-height: 200px;
+    height: 200px;
 
     border: 3px solid rgba(14, 13, 13, 0.63);
     border-radius: 30px;
 
     overflow: hidden; 
     display: flex; 
-    justify-content: left; 
-    align-items: left; 
+    justify-content: center; 
+    align-items: center; 
 }
 .myPhoto img {
     width: 100%; 
     height: auto; 
     object-fit: cover; 
  
-    transform: scale(1.4);
+    transform: translateY(37px);
 }
+
 #experience{
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
+}
+.company{
+    
+    margin-right:  1em;
+    margin-left:  1em;
+    margin-bottom: 0.5em;
+    border-bottom: 1px solid #ebebd3;
+
+    padding: 0.2em;
+
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+ 
+    cursor: pointer;
+}
+.company p{
+    font-size: 1rem;
+    display: inline-block;
+    
+    margin-right: 1em;
+
+
 }
 
 /* ANIMATIONS*/

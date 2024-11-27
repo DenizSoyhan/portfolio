@@ -60,7 +60,7 @@ p{
     
 }
 .hidden{
-    display: none;
+    display: none !important; /*otherwise the display flex of mainpage is applied*/
 }
 
 /*NAV BAR*/
@@ -162,8 +162,8 @@ p{
 
 /* MAIN PAGE*/
 #mainPage{
+    
     display: flex;
-
     flex-direction: column;
 }
 .showContainer{
@@ -374,6 +374,7 @@ p{
     box-sizing: border-box;
 
     width: 30%;
+    min-width: 180px;
     height: 186px;
 
     border: 3px solid rgba(14, 13, 13, 0.63);

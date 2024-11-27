@@ -55,7 +55,7 @@ mainPageButton.classList.add('chosenNavBar');
 setTimeout(() => {
     
     navList.classList.add('show'); // Add the class to trigger the fade-in
-    mainPage.classList.toggle('hidden');
+    
 }, 5000);
 
 

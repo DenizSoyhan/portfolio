@@ -278,7 +278,17 @@ p{
     transition: 0.5s;
 }
 
-@media(max-width:870px){
+
+
+@media(min-width: 740px) and (max-width: 925px){
+    .details.active{
+        height: 120px; 
+    
+        overflow: hidden;
+        transition: 0.5s;
+    }
+}
+@media (max-width: 740px){
     .details.active{
         height: 150px; 
     
@@ -406,7 +416,7 @@ p{
 }
 /*IMAGE SCALING END*/
 
-.myPhoto{
+.myPhoto{/*TODO: ADD NEW SCALING FOR SMALL SCREENS THE TOPSIDE IS SHOWING*/
     box-sizing: border-box;
 
     width: 30%;

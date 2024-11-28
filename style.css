@@ -62,15 +62,23 @@ p{
 .hidden{
     display: none !important; /*otherwise the display flex of mainpage is applied*/
 }
+.titleOfContanier{
+    position: absolute;
 
+    left: 15px;
+    top: -30px;
+
+    font-weight: 700;
+    font-size: 1.4rem;
+
+    color:  #ebebd3;
+}
 /*NAV BAR*/
 
 .navList{
     opacity: 0;
     transition: opacity 1.5s ease-in;
 
-    transform: translateY(50px); /* Start slightly lower */
-    transition: opacity 1.5s ease-in, transform 1.5s ease-in; 
 
     padding: 0;
     margin: 0.4rem auto;
@@ -79,7 +87,11 @@ p{
     justify-content: space-evenly;
     align-items: center;
 
-    
+    animation-name: fadeInFromTop;
+    animation-duration: 1s;
+    animation-fill-mode: backwards;
+    animation-delay: 2.5s;
+    transition: ease-in;
 }
 .navList.show {
     opacity: 1;
@@ -179,9 +191,18 @@ p{
 }
 /*education*/
 #education{
+    position: relative;
+
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
+
+    animation-name: fadeInFromTop;
+    animation-duration: 2s;
+    animation-fill-mode: backwards;
+    animation-delay: 3s;
+    transition: ease-in;
 }
+
 .school{
     
     margin-right:  1em;
@@ -295,6 +316,21 @@ p{
     object-fit: cover; 
 
 }
+#techMainLeft{
+    animation-name: fadeInFromLeft;
+    animation-duration: 1s;
+    animation-fill-mode: backwards;
+    animation-delay: 3s;
+    transition: ease-in;
+    
+}
+#techMainRight{
+    animation-name: fadeInFromRight;
+    animation-duration: 1s;
+    animation-fill-mode: backwards;
+    animation-delay: 3s;
+    transition: ease-in;
+}
 .techSub{
 
     position: relative;
@@ -385,6 +421,12 @@ p{
     display: flex; 
     justify-content: center; 
     align-items: center; 
+
+    animation-name: fadeIn;
+    animation-duration: 2s;
+    animation-fill-mode: backwards;
+    animation-delay: 2.9s;
+    transition: ease-in;
 }
 .myPhoto img {
     width: 100%; 
@@ -395,8 +437,24 @@ p{
 }
 
 #experience{
+    position: relative;
+
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
+    
+    min-height: 186px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    animation-name: fadeInFromDown;
+    animation-duration: 1s;
+    animation-fill-mode: backwards;
+    animation-delay: 3s;
+    transition: ease-in;
+
+
 }
 .company{
     
@@ -424,6 +482,8 @@ p{
 }
 
 /* ANIMATIONS*/
+
+/*title Animations*/
 @keyframes typing {
     from{width: 0 ;}
 }
@@ -443,7 +503,8 @@ p{
     to{width: 0%;}
 }
 
-@keyframes fadeInUp2 {
+/*general Animations*/
+@keyframes fadeIn {
     from {
         opacity: 0;
 
@@ -453,7 +514,54 @@ p{
 
     }
 }
+@keyframes fadeInFromTop {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+        
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+        
+    }
+}
+@keyframes fadeInFromDown {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
 
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+
+    }
+}
+@keyframes fadeInFromRight {
+    from {
+        transform: translateX(30px);
+        opacity: 0;
+
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+
+    }
+}
+@keyframes fadeInFromLeft {
+    from {
+        transform: translateX(-30px);
+        opacity: 0;
+
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+
+    }
+}
 @keyframes fadeOut {
     from {
         opacity: 1;
@@ -464,3 +572,8 @@ p{
         transform: scale(0.9);
     }
 }
+.noDelay {
+    animation-delay: 0s !important; /* Ensure it overrides other delays */
+    transition: ease !important;
+    animation-duration: 1s !important;
+  }

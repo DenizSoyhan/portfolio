@@ -9,6 +9,14 @@ const mainPage=document.getElementById('mainPage');
 const downloadsPage=document.getElementById('downloadsPage');
 const projectsPage=document.getElementById('projectsPage');
 
+const educationDiv = document.getElementById('education');
+const leftTechDiv = document.getElementById('techMainLeft');
+const photoDiv = document.getElementById('photoContainer');
+const rightTechDiv = document.getElementById('techMainRight');
+const experienceDiv = document.getElementById('experience');
+
+let firstTimeNav=1;
+
 let whichPage=0; //0 main  1 downloads   2 projects
 
 const messages = [" Oğul Deniz Soyhan", "a computer Engineer", " a WEB Enthusiast."]; // Add messages here
@@ -56,11 +64,21 @@ setTimeout(() => {
     
     navList.classList.add('show'); // Add the class to trigger the fade-in
     
-}, 5000);
+}, 2500);
 
-
+function overRideDelay(firstTimeNav){
+    if(firstTimeNav){
+        educationDiv.classList.add('noDelay');
+        experienceDiv.classList.add('noDelay');
+        leftTechDiv.classList.add('noDelay'); 
+        photoDiv.classList.add('noDelay');
+        rightTechDiv.classList.add('noDelay'); 
+    }
+    firstTimeNav=0;
+}
 //page changing animation
 mainPageButton.addEventListener('click',function(){
+
     if(whichPage!=0){
         downloadsPage.style.animation='fadeOut 0.5s ease forwards';
         projectsPage.style.animation='fadeOut 0.5s ease forwards';
@@ -80,6 +98,7 @@ mainPageButton.addEventListener('click',function(){
 })
 
 downloadsPageButton.addEventListener('click',function(){
+    overRideDelay(firstTimeNav);
     if(whichPage!=1){
         mainPage.style.animation='fadeOut 0.5s ease forwards';
         projectsPage.style.animation='fadeOut 0.5s ease forwards';
@@ -100,6 +119,7 @@ downloadsPageButton.addEventListener('click',function(){
 })
 
 projectsButton.addEventListener('click',function(){
+    overRideDelay(firstTimeNav);
     if(whichPage!=2){
         mainPage.style.animation='fadeOut 0.5s ease forwards';
         downloadsPage.style.animation='fadeOut 0.5s ease forwards';
@@ -128,7 +148,7 @@ for(let i=0;i<outlookContainers.length;i++){
     let expandButton=school.childNodes[3];
 
     let details=outlookContainers[i].childNodes[3];
-    console.log(expandButton)
+
 
     outlookContainers[i].addEventListener('click',function(){
         details.classList.toggle('active');

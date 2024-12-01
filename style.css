@@ -563,8 +563,20 @@ p{
 
     font-size: 2rem;
     color: #000;
+    
 }
 
+.download i,
+.see i{
+    color: rgba(14, 13, 13, 0.63);
+    transition: color 0.1s ease-in;
+}
+.download i:hover{
+    color: #c33149;
+}
+.see i:hover{
+    color: #c33149;
+}
 /* ANIMATIONS*/
 
 /*title Animations*/

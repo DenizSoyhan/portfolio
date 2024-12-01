@@ -15,6 +15,8 @@ const photoDiv = document.getElementById('photoContainer');
 const rightTechDiv = document.getElementById('techMainRight');
 const experienceDiv = document.getElementById('experience');
 
+const projectsContainers = document.getElementById('projects');
+
 let firstTimeNav=1;
 
 let whichPage=0; //0 main  1 downloads   2 projects
@@ -160,3 +162,22 @@ for(let i=0;i<outlookContainers.length;i++){
         }
     })
 }
+
+/*Give projects animations */
+function animateProjects(){
+    console.log(projectsContainers.children)
+
+    for(let i = 0;i<projectsContainers.children.length;i++){
+        if(i%2==0){
+            projectsContainers.children[i].style.animation = 'fadeInFromLeft 1s ease forwards'
+            console.log(projectsContainers[i]);
+        }else{
+             projectsContainers.children[i].style.animation = 'fadeInFromRight 1s ease forwards'
+             console.log(projectsContainers[i]);
+
+            }
+        
+    }
+    
+}
+animateProjects();

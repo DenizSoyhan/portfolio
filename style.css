@@ -620,9 +620,11 @@ p{
     align-items: center;
 }
 .photoLinkContainer img{
- 
+    box-sizing: border-box;
+    height: 150px; 
     width: 100%; 
-    height: auto; 
+   
+    
     object-fit: cover; 
 
     border: 2px solid rgba(14, 13, 13, 0.63);
@@ -651,7 +653,22 @@ p{
     font-weight: 700;
     font-size: 1.25rem;
 
-    color: #ebebd3;
+    color: #ebebd3; 
+}
+#ets2Container {
+    box-sizing: border-box;
+    height: 150px; 
+    width: 100%; 
+   
+    
+    object-fit: cover; 
+
+    border: 2px solid rgba(14, 13, 13, 0.63);
+    border-radius: 20px;
+
+    overflow: hidden;
+
+
 }
 .briefing{
     margin: 0.5em 1em 1em 0em;
@@ -666,10 +683,52 @@ p{
 
     justify-content: space-evenly;
 }
+.technologies img {
+    min-width: 60px; 
+    height: auto;
+    cursor: pointer;
+}
+.withToolTip{
+    position: relative;
 
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+}
+.tooltip {
+    position: absolute;
+    bottom: -30px; 
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    white-space: nowrap;
+    display: none; /* Hidden by default */
+    z-index: 10;
+
+    font-weight: 600;
+}
 /*SPECIFIC PROJECT SCALING*/
 .projectContainer #JS{
+    transform: scale(1.2);
+}
+.projectContainer #css{
+    transform: scale(1.4);
+}
+.projectContainer #node{
     transform: scale(1.1);
+}
+#ets2 {
+    max-width: 100%; 
+    height: auto; 
+    transform: scale(1.5);
+
+
 }
 /* ANIMATIONS*/
 

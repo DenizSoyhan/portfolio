@@ -181,3 +181,57 @@ function animateProjects(){
     
 }
 animateProjects();
+
+/*tooltips for projects*/
+
+document.addEventListener('DOMContentLoaded', () => {
+    const images = document.querySelectorAll('.technologies img');
+
+    // Tooltip text array
+    const toolTipText = [
+        "HTML5: The standard for structuring web pages.",
+        "CSS: The language for styling web pages.",
+        "JavaScript: The language for web interactivity.",
+        "YOLOv4: A real-time object detection algorithm.",
+        "Python: A popular and versatile programming language.",
+        "Slick.js: A jQuery plugin for creating responsive and customizable carousels.",
+        "Node.js: A JavaScript runtime for building scalable server-side applications.",
+        "GitHub: A platform for version control and collaborative software development."
+    ];
+
+    // Map image ids to corresponding toolTipText indexes
+    const toolTipMap = {
+        html: 0,
+        css: 1,
+        JS: 2,
+        yoloV4: 3,
+        python: 4,
+        slick: 5,
+        node: 6,
+        github: 7
+    };
+
+    images.forEach(img => {
+        const id = img.id; 
+        const tooltipIndex = toolTipMap[id]; 
+        const tooltipText = toolTipText[tooltipIndex]; 
+
+        if (tooltipText) {
+      
+            const tooltip = document.createElement('div');
+            tooltip.className = 'tooltip';
+            tooltip.textContent = tooltipText;
+            img.after(tooltip); 
+
+            // Show tooltip on hover
+            img.addEventListener('mouseenter', () => {
+                tooltip.style.display = 'block';
+            });
+
+            // Hide tooltip when not hovering
+            img.addEventListener('mouseleave', () => {
+                tooltip.style.display = 'none';
+            });
+        }
+    });
+});

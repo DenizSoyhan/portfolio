@@ -142,25 +142,31 @@ projectsButton.addEventListener('click',function(){
 })
 
 /*ACCORDION EDUCATION*/
-
+/*For a smooth accordion animation I used requestAnimationFrame otherwise closing the accordion causes a delay which looks and feels bad*/
 const outlookContainers = document.getElementsByClassName('outlook');
 
-for(let i=0;i<outlookContainers.length;i++){
-    let school=outlookContainers[i].childNodes[1]
-    let expandButton=school.childNodes[3];
+for (let i = 0; i < outlookContainers.length; i++) {
+    let school = outlookContainers[i].childNodes[1];
+    let expandButton = school.childNodes[3];
+    let details = outlookContainers[i].childNodes[3];
 
-    let details=outlookContainers[i].childNodes[3];
-
-
-    outlookContainers[i].addEventListener('click',function(){
+    outlookContainers[i].addEventListener('click', function () {
         details.classList.toggle('active');
         expandButton.classList.toggle('buttonActive');
-        if(expandButton.classList.contains('buttonActive')){ 
-            expandButton.textContent='-';
-        }else{
-            expandButton.textContent='+';
+
+        if (details.classList.contains('active')) {
+            // Expanding: Set max-height dynamically to content height
+            details.style.maxHeight = details.scrollHeight + "px";
+            expandButton.textContent = '-';
+        } else {
+            // Collapsing: Set max-height to the current height first, then to 0 for a smooth transition
+            details.style.maxHeight = details.scrollHeight + "px"; // Set to current height to trigger animation
+            requestAnimationFrame(() => {
+                details.style.maxHeight = "0";
+            });
+            expandButton.textContent = '+';
         }
-    })
+    });
 }
 
 /*Give projects animations */

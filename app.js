@@ -149,7 +149,28 @@ for (let i = 0; i < outlookContainers.length; i++) {
     let school = outlookContainers[i].childNodes[1];
     let expandButton = school.childNodes[3];
     let details = outlookContainers[i].childNodes[3];
+    if(outlookContainers[i].classList.contains("finland")){ //added extra condition for slick carousel other wise it collapses after photo change
+        console.log(outlookContainers[i].childNodes[1]);
+        outlookContainers[i].childNodes[1].addEventListener('click', function () {
+            details.classList.toggle('active');
+            expandButton.classList.toggle('buttonActive');
+    
+            if (details.classList.contains('active')) {
+                // Expanding: Set max-height dynamically to content height
+                details.style.maxHeight = details.scrollHeight + "px";
+                expandButton.textContent = '-';
+            } else {
+                // Collapsing: Set max-height to the current height first, then to 0 for a smooth transition
+                details.style.maxHeight = details.scrollHeight + "px"; // Set to current height to trigger animation
+                requestAnimationFrame(() => {
+                    details.style.maxHeight = "0";
+                });
+                expandButton.textContent = '+';
+            }
+        });
 
+        continue;
+    }
     outlookContainers[i].addEventListener('click', function () {
         details.classList.toggle('active');
         expandButton.classList.toggle('buttonActive');

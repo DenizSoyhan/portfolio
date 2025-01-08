@@ -49,6 +49,58 @@ li{
 p{
     margin-bottom: 0;
 }
+/*Slick Carousel*/
+.outlook.finland p{
+    margin-bottom: 15px;
+}
+.slickPicContainer{
+    margin: 1em;
+    border: 1px solid black;
+    height: 65%;
+  }
+    .slider {
+      margin: 0 auto;
+  }
+  .center{
+    display: flex;
+  
+    justify-content: center;
+    align-items: center;
+  
+    width: 100%;
+  }
+  
+  img {
+    width: 80%; 
+    max-height: 400px; 
+    object-fit: contain; /* Ensures the image fits inside its container without cropping */
+    margin: 0 auto;
+  }
+  
+  .slick-prev:before, 
+  .slick-next:before {
+      color: black;
+    z-index: 100;
+  }
+  
+  .slick-prev.slick-arrow
+   {
+    left: 0px;
+    transform:scale(3)
+    
+  }
+  .slick-next.slick-arrow
+   {
+    right: 5px;
+    transform:scale(3)
+  
+  }
+  
+  
+  .slick-slide img{
+    display: block;
+  
+  }
 .container{
 
     width: 100%;
@@ -205,7 +257,7 @@ p{
     padding-bottom: 1em;
 }
 
-.school{
+.school{ /*TODO:Broken in small screen sizes for some reason*/
     
     margin-right:  1em;
     margin-left:  1em;

@@ -49,6 +49,7 @@ li{
     border: 2px solid #ebebd3;
     border-radius: 20px;
 }
+
 p{
     margin-bottom: 0;
 }
@@ -83,7 +84,7 @@ p{
   
   .slick-prev:before, 
   .slick-next:before {
-      color: black;
+      color: #ebebd3;
     z-index: 100;
   }
   
@@ -105,6 +106,24 @@ p{
     display: block;
   
   }
+  @media(max-width: 500px){
+  
+    .slick-prev.slick-arrow
+    {
+ 
+     transform:scale(1.5);
+     left: -10px;
+        
+   }
+   .slick-next.slick-arrow
+    {   
+     right: -10px;
+     transform:scale(1.5)
+     
+   
+   }
+}
+
 .container{
 
     width: 100%;
@@ -128,6 +147,12 @@ p{
     font-size: 1.4rem;
 
     color:  #ebebd3;
+}
+@media (max-width:500px){
+    #titleExperience{
+        left: 5px;
+        top: -30px;
+    }
 }
 /*NAV BAR*/
 
@@ -162,6 +187,22 @@ p{
 .navListItem:hover{
     color: #3a6469;
     background-color: #ebebd3;
+}
+@media(max-width: 500px){
+    nav{
+        margin-bottom: 10px;
+    }
+    .navList{
+        flex-direction: column;
+
+
+    }
+    .navList li{
+        margin-bottom: 10px;
+        min-width: 216.5px;
+
+        text-align: center;
+    }
 }
 .chosenNavBar{
     color: #3a6469;
@@ -333,23 +374,43 @@ p{
 
 }
 
+@media(max-width: 500px){
+    .showContainer{
+        width: 90%;
+        margin-bottom: 0em;
+        margin-top: 1em;
+        padding-bottom: 0.25em !important;
+    }
+    .school{
+        align-items: start;
+    }
+    .type{
+        font-size: 0.9rem !important; 
+        margin-top: 0px;
+    }
+    .time{
+        font-size: 0.9rem !important; 
+        margin-top: 0px;
+    }
+ 
+    #education{
+        position: relative;
+    
 
-@media(min-width: 740px) and (max-width: 925px){
-    .details.active{
-        height: 120px; 
     
-        overflow: hidden;
-        transition: 0.5s;
+        animation-name: fadeInFromLeft;
+        animation-duration: 2s;
+        animation-fill-mode: backwards;
+        animation-delay: 3s;
+        transition: ease-in;
+    
+        padding-bottom: 1em;
     }
 }
-@media (max-width: 740px){
-    .details.active{
-        height: 150px; 
-    
-        overflow: hidden;
-        transition: 0.5s;
-    }
-}
+
+
+
+
 /*MIDPOINT*/
 #me{
     display: flex;
@@ -449,6 +510,76 @@ p{
 
     transform: scale(1);
 }
+@media(max-width: 500px){
+  
+    #me{
+        flex-direction: column;
+        align-items: center;
+    }
+    .techMain{
+        box-sizing: border-box;
+        width: 100%;
+        height: 80px;
+        
+       
+    
+        display: grid;
+        grid-template-columns: repeat(4, 1fr); /* 2 columns */
+        grid-template-rows: repeat(auto, 1fr);
+    
+        justify-content: center;
+        align-items: center;
+        order: 1;
+    }
+    .techMainLeft{
+        order: 2;
+    }
+    .techMainRight{
+        order: 3;
+    }
+    .myPhoto{
+        width: 70% !important;
+        
+        animation-name: fadeInFromRight !important;
+    }
+    #photoContainer{
+        margin-bottom: 0.75em;
+
+    }
+
+    .myPhoto img {
+
+        transform: scale(0.75);
+        transform: translateY(50px) !important;
+    }
+
+    #css{
+        transform: scale(1.05) !important;
+    }
+    #JS{
+        transform: scale(0.85) !important;
+    }
+    #python{
+        transform: scale(0.9) !important;
+    }
+    #githubImg{
+        transform: scale(1.5) !important;
+    }
+    
+    #slickJS{
+        transform: scale(1.4) !important;
+    }
+    #yoloV4{
+        transform: scale(1.1) !important;
+    }
+    #html{
+        transform: scale(0.73) !important;
+    }
+    #node{
+        transform: scale(0.9) !important;
+    }
+
+}
 /*SPECIFIC IMAGE SCALING*/
 #css{
     transform: scale(1.3);
@@ -459,7 +590,7 @@ p{
 #python{
     transform: scale(1.1);
 }
-#github{
+#githubImg{
     transform: scale(1.8);
 }
 #slickJS{
@@ -544,7 +675,17 @@ p{
 
 
 }
+@media (max-width:500px){
+    #experience{
+        animation-name: fadeInFromLeft;
+    }
+}
 /*DOWNLOADS&LINKS*/
+@media(max-width:500px){
+    #allLinks{
+        row-gap: 0px;
+    }
+}
 #allLinks{
 
     border:0;
@@ -558,6 +699,12 @@ p{
 
     row-gap: 130px;
     
+}
+@media(max-width:500px){
+    #allLinks{
+        row-gap: 28px;
+        margin-top: 0em;
+    }
 }
 
 .downloadContainer{
@@ -634,6 +781,65 @@ p{
 }
 
 /*Projects*/
+@media (max-width:500px){
+    .projectContainer{
+
+    
+
+    
+        display: flex;
+        flex-direction: column;
+    
+        justify-content: center;
+        align-items: center;
+    }
+
+    .photoLinkContainer{
+        width: 85% !important;
+        max-width: 185px;
+    
+        margin: 0.5em 0em 0em 0em !important;
+        
+        display: flex;
+        flex-direction: column;
+    
+        justify-content: center;
+        align-items: center;
+    }
+    .briefingContainer{
+        width: 100% !important;
+    }
+    .projectText{
+        margin-top: 0em !important;
+
+        display: flex;
+        flex-direction: column;
+
+        justify-content: center;
+        align-items: center;
+    }
+    .projectTitle{
+        text-align: center;
+    }
+    .briefing{
+        margin-bottom: 0em !important;
+    }
+    .technologies{
+        padding: 0em !important;
+        margin-bottom: 0.5em;
+
+
+    }
+    #frontEndPracticeContainer{
+        grid-template-columns: repeat(1, 1fr) !important; /* 2 columns */
+        grid-template-rows: auto;
+    }
+    .practiceName{
+        font-size: 1.25rem !important;
+    }
+
+
+}
 #projects{
     border: 0;
 }

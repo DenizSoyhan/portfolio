@@ -302,7 +302,7 @@ p{
     padding-bottom: 1em;
 }
 
-.school{ /*TODO:Broken in small screen sizes for some reason*/
+.school{ 
     
     margin-right:  1em;
     margin-left:  1em;
@@ -601,7 +601,7 @@ p{
 }
 /*IMAGE SCALING END*/
 
-.myPhoto{/*TODO: ADD NEW SCALING FOR SMALL SCREENS THE TOPSIDE IS SHOWING*/
+.myPhoto{
     box-sizing: border-box;
 
     width: 30%;
@@ -705,6 +705,9 @@ p{
         row-gap: 28px;
         margin-top: 0em;
     }
+    .download{
+        margin-left: 1em !important;
+    }
 }
 
 .downloadContainer{
@@ -779,6 +782,7 @@ p{
 .see i:hover{
     color: #c33149;
 }
+
 
 /*Projects*/
 @media (max-width:500px){

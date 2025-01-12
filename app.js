@@ -221,9 +221,9 @@ document.addEventListener('DOMContentLoaded', () => {
         "JavaScript: The language for web interactivity.",
         "YOLOv4: A real-time object detection algorithm.",
         "Python: A popular and versatile programming language.",
-        "Slick.js: A jQuery plugin for creating responsive and customizable carousels.",
-        "Node.js: A JavaScript runtime for building scalable server-side applications.",
-        "GitHub: A platform for version control and collaborative software development."
+        "Slick.js: A jQuery plugin for creating responsive carousels.",
+        "Node.js: A JS runtime for building scalable apps.",
+        "GitHub: A version controll platform for software development."
     ];
 
     // Map image ids to corresponding toolTipText indexes

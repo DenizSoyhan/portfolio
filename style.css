@@ -466,6 +466,8 @@ p{
     align-items: center;
 
     cursor: pointer;
+
+    
 }
 .tooltipText{
     position: absolute;
@@ -481,6 +483,8 @@ p{
     visibility: hidden;
     opacity: 0;
     transition: opacity 0.5s ease-out;
+
+    z-index: 1000;
 }
 
 .tooltipText::before{ /*POINTY PART*/
@@ -977,6 +981,21 @@ p{
     z-index: 10;
 
     font-weight: 600;
+}
+/*Specific alignments of tooltips for smaller screen sizes*/
+@media (max-width:500px){
+    .withToolTip.threeLeft .tooltip {
+        left: 200%;
+    }
+    .withToolTip.threeRight .tooltip {
+        left: -100%;
+    }
+    .withToolTip.twoLeft .tooltip {
+        left: 150%;
+    }
+    .withToolTip.twoRight .tooltip {
+        left: -70%;
+    }
 }
 #frontEndPracticeContainer{
 

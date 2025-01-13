@@ -4,10 +4,12 @@ html {
 body{
     padding: 0;
     margin: 0;
-    background-color: #2A2D34;
+    background-color:#F5F5F5;
 
     font-family: monospace;
     font-size: 1.5em;
+
+    color: #2E3532 !important;
 }
 
 header{
@@ -44,9 +46,9 @@ li{
     margin: 0 0.5rem;
     padding: 0.4rem 1rem;
     
-    color: #ebebd3;
+    color: #5C80BC;
 
-    border: 2px solid #ebebd3;
+    border: 2px solid #5C80BC;
     border-radius: 20px;
 }
 
@@ -84,7 +86,7 @@ p{
   
   .slick-prev:before, 
   .slick-next:before {
-      color: #ebebd3;
+      color: #A5668B;
     z-index: 100;
   }
   
@@ -146,7 +148,7 @@ p{
     font-weight: 700;
     font-size: 1.4rem;
 
-    color:  #ebebd3;
+    color:  #A5668B;
 }
 @media (max-width:600px){
     #titleExperience{
@@ -186,7 +188,7 @@ p{
 }
 .navListItem:hover{
     color: #3a6469;
-    background-color: #ebebd3;
+    background-color: #5C80BC;
 }
 @media(max-width: 600px){
     nav{
@@ -205,8 +207,8 @@ p{
     }
 }
 .chosenNavBar{
-    color: #3a6469;
-    background-color: #ebebd3;
+    color: #5C80BC;
+    background-color: #BFAA88;
 }
 
 /*INTRO */
@@ -226,7 +228,7 @@ p{
     text-align: center;
     font-size: 3rem;
 
-    color: rgba(14, 13, 13, 0.63);
+    color: #2E3532;
 
     margin-top: 1rem;
 }
@@ -238,8 +240,8 @@ p{
     font-weight: 400;
     font-size: 2rem;
     font-family: monospace;
-    border-right: 4px solid #3a6469;
-    color: #3a6469;
+    border-right: 4px solid #5C80BC;
+    color: #FF934F;
     white-space: pre; /* Preserve whitespace in text */
    
     width: 100%;
@@ -307,7 +309,7 @@ p{
     margin-right:  1em;
     margin-left:  1em;
     margin-bottom: 0.5em;
-    border-bottom: 1px solid #ebebd3;
+    border-bottom: 1px solid #FF934F;
 
     padding: 0.2em;
 
@@ -330,7 +332,7 @@ p{
     font-size: 2em;
     cursor: pointer;
 
-    color: #3a6469;
+    color: #FF934F;
 
     transition: 0.4s;
 }
@@ -338,7 +340,7 @@ p{
     content: '-';
     cursor: pointer;
 
-    color: #c33149;
+    color: #2E3532;
 
     transition: 0.4s;
 }
@@ -352,7 +354,7 @@ p{
 .type{
     
     font-weight: 700;
-    color: #ebebd3;
+    color: #FF934F;
 
 }
 
@@ -365,7 +367,7 @@ p{
     max-height: 0; /* Starts with no height */
     overflow: hidden;
     transition: max-height 0.4s ease-in-out; 
-    color: #ebebd3;
+    color: #2E3532;
 }
 
 .details.active {
@@ -661,7 +663,7 @@ p{
     margin-right:  1em;
     margin-left:  1em;
     margin-bottom: 0.5em;
-    border-bottom: 1px solid #ebebd3;
+    border-bottom: 1px solid #FF934F;
 
     padding: 0.2em;
 
@@ -719,7 +721,7 @@ p{
     width: 60%;
     position: relative;
 
-    border-bottom: 2px solid #ebebd3;
+    border-bottom: 2px solid #2E3532;
 
     display: flex;
     flex-direction: column;
@@ -743,7 +745,7 @@ p{
     left: auto;
 
 
-    color: #ebebd3;
+    color: #2E3532;
     font-weight: 700;
 
     min-width: 195px;
@@ -754,7 +756,7 @@ p{
 
     padding-top: 0.05em;
 
-    color: #ebebd3;
+    color: #5C80BC;
 
     
 }
@@ -778,14 +780,14 @@ p{
 
 .download i,
 .see i{
-    color: rgba(14, 13, 13, 0.63);
+    color: #FF934F;
     transition: color 0.1s ease-in;
 }
 .download i:hover{
-    color: #c33149;
+    color: #5C80BC;
 }
 .see i:hover{
-    color: #c33149;
+    color: #5C80BC;
 }
 
 
@@ -875,7 +877,7 @@ p{
 
     font-weight: 700;
     font-size: 1.25rem;
-    color: #c33149;
+    color: #A5668B;
 }
 
 .photoLinkContainer{
@@ -923,7 +925,7 @@ p{
     font-weight: 700;
     font-size: 1.25rem;
 
-    color: #ebebd3; 
+    color: #A5668B; 
 }
 #ets2Container {
     box-sizing: border-box;
@@ -983,6 +985,21 @@ p{
 
     font-weight: 600;
 }
+
+#ODI {
+    margin-top: 1em;
+    overflow: hidden; 
+    position: relative;
+
+    border: 2px solid rgba(14, 13, 13, 0.63);
+    border-radius: 20px;
+  }
+
+#ODI img {
+
+    transform: translateY(8%) scale(1.4); /* Zoom in and center */
+
+  }
 /*Specific alignments of tooltips for smaller screen sizes*/
 @media (max-width:600px){
     .withToolTip.threeLeft .tooltip {
@@ -1051,8 +1068,11 @@ p{
 
     font-size: 1.5rem;
     font-weight: 700;
-    color: #ebebd3;
+    color: #A5668B;
 
+}
+.briefing a{
+    color: #5C80BC !important;
 }
 /*SPECIFIC PROJECT SCALING*/
 .projectContainer #JS{

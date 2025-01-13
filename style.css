@@ -106,7 +106,7 @@ p{
     display: block;
   
   }
-  @media(max-width: 500px){
+  @media(max-width: 600px){
   
     .slick-prev.slick-arrow
     {
@@ -148,7 +148,7 @@ p{
 
     color:  #ebebd3;
 }
-@media (max-width:500px){
+@media (max-width:600px){
     #titleExperience{
         left: 5px;
         top: -30px;
@@ -188,7 +188,7 @@ p{
     color: #3a6469;
     background-color: #ebebd3;
 }
-@media(max-width: 500px){
+@media(max-width: 600px){
     nav{
         margin-bottom: 10px;
     }
@@ -374,7 +374,7 @@ p{
 
 }
 
-@media(max-width: 500px){
+@media(max-width: 600px){
     .showContainer{
         width: 90%;
         margin-bottom: 0em;
@@ -514,7 +514,7 @@ p{
 
     transform: scale(1);
 }
-@media(max-width: 500px){
+@media(max-width: 600px){
   
     #me{
         flex-direction: column;
@@ -549,6 +549,7 @@ p{
     #photoContainer{
         margin-bottom: 0.75em;
 
+        max-width: 250px;
     }
 
     .myPhoto img {
@@ -679,13 +680,13 @@ p{
 
 
 }
-@media (max-width:500px){
+@media (max-width:600px){
     #experience{
         animation-name: fadeInFromLeft;
     }
 }
 /*DOWNLOADS&LINKS*/
-@media(max-width:500px){
+@media(max-width:600px){
     #allLinks{
         row-gap: 0px;
     }
@@ -704,7 +705,7 @@ p{
     row-gap: 130px;
     
 }
-@media(max-width:500px){
+@media(max-width:600px){
     #allLinks{
         row-gap: 28px;
         margin-top: 0em;
@@ -789,7 +790,7 @@ p{
 
 
 /*Projects*/
-@media (max-width:500px){
+@media (max-width:600px){
     .projectContainer{
 
     
@@ -983,7 +984,7 @@ p{
     font-weight: 600;
 }
 /*Specific alignments of tooltips for smaller screen sizes*/
-@media (max-width:500px){
+@media (max-width:600px){
     .withToolTip.threeLeft .tooltip {
         left: 200%;
     }

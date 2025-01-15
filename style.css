@@ -685,6 +685,7 @@ p{
 @media (max-width:600px){
     #experience{
         animation-name: fadeInFromLeft;
+        margin-bottom: 0.5em;
     }
 }
 /*DOWNLOADS&LINKS*/
@@ -855,6 +856,8 @@ p{
     border: 0;
 }
 .projectContainer{
+    min-height: 250px;
+
     position: relative;
 
     border: 2px solid rgba(14, 13, 13, 0.63);

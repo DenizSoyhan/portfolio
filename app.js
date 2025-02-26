@@ -192,7 +192,7 @@ for (let i = 0; i < outlookContainers.length; i++) {
 
 /*Give projects animations */
 function animateProjects(){
-    console.log(projectsContainers.children)
+
 
     for(let i = 0;i<projectsContainers.children.length;i++){
         if(i%2==0){

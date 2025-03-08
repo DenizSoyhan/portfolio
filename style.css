@@ -370,11 +370,6 @@ p{
     color: #2E3532;
 }
 
-.details.active {
-
-    /*remains from previous iterations and might be useful in the future*/
-
-}
 
 @media(max-width: 600px){
     .showContainer{

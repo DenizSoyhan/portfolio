@@ -21,7 +21,7 @@ let firstTimeNav=1;
 
 let whichPage=0; //0 main  1 downloads   2 projects
 
-const messages = [" Oğul Deniz Soyhan", "a computer Engineer", " a WEB Enthusiast."]; // Add messages here
+const messages = [" Oğul Deniz Soyhan", "a computer Engineer", " a WEB Enthusiast."]; 
 let messageIndex = 0;
 
 // Function to start/restart the animation
